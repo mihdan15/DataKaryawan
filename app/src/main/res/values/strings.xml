@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TugasCRUD</string>
+    <string name="selected_item">SelectedItem</string>
+    <string-array name="jabatan">
+        <item>Direktur</item>
+        <item>Manager</item>
+        <item>Kepala Bagian</item>
+        <item>Pegawai Tetap</item>
+        <item>Honorer</item>
+        <item>Office Boy</item>
+    </string-array>
+</resources>

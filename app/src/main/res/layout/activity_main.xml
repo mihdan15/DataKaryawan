@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.15"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/logo" />
+
+
+    <!-- Input Nama -->
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_marginTop="8dp"
+        android:hint="Nama Karyawan" />
+
+    <!-- Input NIP -->
+
+    <EditText
+        android:id="@+id/alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama"
+        android:layout_marginTop="8dp"
+        android:hint="NIP"
+        android:inputType="number" />
+
+    <!--input no jabatan-->
+
+    <TextView
+        android:id="@+id/jabatantext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alamat"
+        android:layout_marginTop="8dp"
+        android:text="Jabatan" />
+
+    <Spinner
+        android:id="@+id/jabatanSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jabatantext" />
+
+    <!-- Input Jenis Kelamin -->
+    <TextView
+        android:id="@+id/jkel"
+        android:text="Jenis Kelamin:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jabatanSpinner"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/jkelGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jkel"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/lakilaki"
+            android:text="Laki-laki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/perempuan"
+            android:text="Perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"/>
+
+    </RadioGroup>
+
+    <!-- Tombol Simpan dan Lihat Data -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/bungkusLay"
+        android:layout_below="@id/jkelGroup"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="SIMPAN" />
+
+        <Button
+            android:id="@+id/show_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LIHAT DATA" />
+
+    </LinearLayout>
+
+
+
+
+    <!-- Tombol Logout -->
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bungkusLay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="LOGOUT" />
+
+</RelativeLayout>
